@@ -10,7 +10,8 @@
     "nodemon": "^1.12.1",
     "semistandard": "^11.0.0",
     "tagger": "^0.1.2",
-    "webber": "0.0.1"
+    "webber": "0.0.1",
+    "snyk": "^1.316.1"
   },
   "name": "30-seconds-of-code",
   "description": "A collection of useful Javascript snippets.",
@@ -24,7 +25,9 @@
     "linter": "node ./scripts/lint-script.js",
     "tagger": "node ./scripts/tag-script.js",
     "webber": "node ./scripts/web-script.js",
-    "start": "concurrently --kill-others \"nodemon -e js,md -i README.md -x \\\"npm run build-list\\\"\" \"live-server ./build\""
+    "start": "concurrently --kill-others \"nodemon -e js,md -i README.md -x \\\"npm run build-list\\\"\" \"live-server ./build\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/Chalarangelo/30-seconds-of-code/issues"
   },
-  "homepage": "https://github.com/Chalarangelo/30-seconds-of-code#readme"
+  "homepage": "https://github.com/Chalarangelo/30-seconds-of-code#readme",
+  "snyk": true
 }
